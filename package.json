@@ -29,5 +29,10 @@
     "redux": "^3.6.0",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "react-bootstrap": "^0.32.1",
+    "react-input-mask": "^1.2.2"
   }
 }

@@ -1,17 +1,20 @@
+import 'modules/bootstrap/dist/css/bootstrap.min.css';
+import 'modules/font-awesome/css/font-awesome.min.css';
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { combineReducers, createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import FieldMask from '../src/filedMask/fileldMask'
-import fieldMaskReducer from '../src/filedMask/fileldMaskReducer'
+import Counter from '../src/counter/counter'
+import counterReducer from '../src/counter/counterReducer'
 
 const reducers = combineReducers({
-    fieldMask: fieldMaskReducer
+    counter: counterReducer
 })
 
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
-        <FieldMask />
+        <Counter />
     </Provider>,
     document.getElementById('app'))
