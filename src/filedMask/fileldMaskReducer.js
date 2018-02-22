@@ -3,14 +3,16 @@ import { METHODS_CONSTANTS, TIPO_DOCUMENTO_CONSTANTS, TIPO_FAVORECIDO_CONSTANTS,
 
 const INITIAL_STATE = {
     tipoFavorecido: "", nome: "", tipoDocumento: "", numeroDocumento: "", defaultMaskPattern: "",
-    banco: "", agencia: "", conta: "", digito: "", telefone: "", email: "", showElements: false
+    banco: "", agencia: "", conta: "", digito: "", telefone: "", email: "", showElements: false,
+    errors: { tipoFavorecidoError: { campo: "", message: "" } }
 }
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
         case METHODS_CONSTANTS.TIPO_FAVORECIDO_HANDLE_CHANGE:
+            var newErrors = { tipoFavorecidoError: { campo: "tipoFavorecido", message: "Error in field Tipo Favorecido" } };
             var showFields = action.payload === TIPO_FAVORECIDO_CONSTANTS.CONTA_EXTERNA;
-            return { ...state, tipoFavorecido: action.payload, showElements: showFields }
+            return { ...state, tipoFavorecido: action.payload, showElements: showFields, errors: newErrors }
             break;
         case METHODS_CONSTANTS.TIPO_DOCUMENTO_HANDLE_CHANGE:
 
