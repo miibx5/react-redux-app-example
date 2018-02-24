@@ -26,8 +26,6 @@ const FieldMask = props => (
                                 <div className="col-md-3">
                                     <div className="form-group">
                                         <label>Opções do Favorecido</label>
-                                        {alert(props.field.errors.tipoFavorecidoError.message)}
-                                        {console.log(props.field.errors.tipoFavorecidoError)}
                                         <FormControl id="tipoFavorecido" componentClass="select" placeholder="Selecione"
                                             value={props.field.tipoFavorecido} onChange={props.tipoFavorecidoHandleChange}>
                                             <option value={-1} defaultValue>Selecione</option>
