@@ -4,7 +4,6 @@ import { METHODS_CONSTANTS, TIPO_DOCUMENTO_CONSTANTS, TIPO_FAVORECIDO_CONSTANTS,
 const INITIAL_STATE = {
     tipoFavorecido: "", nome: "", tipoDocumento: "", numeroDocumento: "", defaultMaskPattern: "",
     banco: "", agencia: "", conta: "", digito: "", telefone: "", email: "", showElements: false,
-    selectedDay: "",
     errors: { tipoFavorecidoError: { campo: "", message: "" } }
 }
 
@@ -45,10 +44,6 @@ export default function (state = INITIAL_STATE, action) {
             break;
         case METHODS_CONSTANTS.DIGITO_HANDLE_CHANGE:
             return { ...state, digito: action.payload }
-            break;
-        case METHODS_CONSTANTS.SELECT_DAY_CLICKED:
-            console.log("Chegou no Reducer: ", action.payload)
-            return { ...state, selectedDay: action.payload }
             break;
         default:
             return state;

@@ -63,11 +63,4 @@ export function emailHandleChange(e) {
         type: METHODS_CONSTANTS.EMAIL_HANDLE_CHANGE,
         payload: e.target.value
     }
-}
-
-export function handleDayClick(day, { selected }) {
-    return {
-        type: METHODS_CONSTANTS.SELECT_DAY_CLICKED,
-        payload: selected ? undefined : day,
-    }
-}
+}  

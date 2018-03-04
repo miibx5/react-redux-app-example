@@ -1,29 +1,15 @@
 import React from "react";
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import 'modules/react-day-picker/lib/style.css';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 import { ControlLabel, FormControl, FormGroup, Button } from 'react-bootstrap';
 import InputMask from 'react-input-mask';
 import Autosuggest from 'react-bootstrap-autosuggest';
 import { BANCOS } from "./bancos";
 import { METHODS_CONSTANTS, TIPO_DOCUMENTO_CONSTANTS, TIPO_FAVORECIDO_CONSTANTS, DEFAULT_MASK_PATTERN } from "./fieldMaskConstants";
 import {
-    tipoFavorecidoHandleChange, nomeHandleChange, tipoDocumentoHandleChange,
-    numeroDocumentoHandleChange, defaultMaskPatternHandleChange,
-    bancoHandleChange, agenciaHandleChange, contaHandleChange,
-    digitoHandleChange, telefoneHandleChange, emailHandleChange,
-    handleDayClick
+    tipoFavorecidoHandleChange, nomeHandleChange, tipoDocumentoHandleChange, numeroDocumentoHandleChange, defaultMaskPatternHandleChange,
+    bancoHandleChange, agenciaHandleChange, contaHandleChange, digitoHandleChange, telefoneHandleChange, emailHandleChange
 } from "./fileldMaskAction";
-
-//import 'react-day-picker/lib/style.css';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-
-import MomentLocaleUtils, {
-    formatDate,
-    parseDate,
-} from 'react-day-picker/moment';
-
-import 'moment/locale/pt-br';
 
 var buttonStyle = {
     float: "right"
@@ -50,9 +36,9 @@ const FieldMask = props => (
                                         </FormControl>
                                     </div>
                                 </div>
-                                <div className="col-md-3">
+                                <div>
                                     <FormGroup controlId="browserInput" bsSize="small" >
-                                        <ControlLabel>Bancos</ControlLabel>
+                                        <ControlLabel>Browser</ControlLabel>
                                         <Autosuggest
                                             datalist={BANCOS}
                                             placeholder="What browser do you use?"
@@ -60,21 +46,6 @@ const FieldMask = props => (
                                             onChange={props.bancoHandleChange}
                                             bsSize="small" />
                                     </FormGroup>
-                                </div>
-                                <div className="col-md-3">
-                                    {/*  <DayPicker value={props.field.selectedDay}
-                                        onDayClick={props.handleDayClick} /> */}
-
-                                    <DayPickerInput
-                                        selected={props.field.selectedDay}
-                                        onDayChange={props.handleDayClick}
-                                        formatDate={formatDate}
-                                        parseDate={parseDate}
-                                        placeholder="DD/MM/YYYY"
-                                    /* dayPickerProps={{
-                                        locale: "pt-br"
-                                    }} */
-                                    />
                                 </div>
                             </div>
 
@@ -171,10 +142,7 @@ const mapStateToProps = state => ({ field: state.fieldMask })
 const mapDispatchToProps =
     dispatch => bindActionCreators(
         {
-            tipoFavorecidoHandleChange, nomeHandleChange, tipoDocumentoHandleChange,
-            numeroDocumentoHandleChange, defaultMaskPatternHandleChange,
-            bancoHandleChange, agenciaHandleChange, contaHandleChange,
-            digitoHandleChange, telefoneHandleChange, emailHandleChange,
-            handleDayClick
+            tipoFavorecidoHandleChange, nomeHandleChange, tipoDocumentoHandleChange, numeroDocumentoHandleChange, defaultMaskPatternHandleChange,
+            bancoHandleChange, agenciaHandleChange, contaHandleChange, digitoHandleChange, telefoneHandleChange, emailHandleChange
         }, dispatch)
 export default connect(mapStateToProps, mapDispatchToProps)(FieldMask);
