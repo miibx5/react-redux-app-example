@@ -35,7 +35,7 @@ const FieldMask = props => (
             <div className="col-md-12">
                 <br />
                 <div className="panel panel-default">
-                    <div className="panel-heading fundo-azul-claro">Cadastrar Favorecido </div>
+                    <div className="panel-heading fundo-azul-claro">Cadastro</div>
                     <div className="panel-body">
                         <div id="frmSalvarFavorecido">
                             <div className="row">
@@ -45,8 +45,8 @@ const FieldMask = props => (
                                         <FormControl id="tipoFavorecido" componentClass="select" placeholder="Selecione"
                                             value={props.field.tipoFavorecido} onChange={props.tipoFavorecidoHandleChange}>
                                             <option value={-1} defaultValue>Selecione</option>
-                                            <option value={TIPO_FAVORECIDO_CONSTANTS.CONTA_INTERNA}>BPP Digital</option>
-                                            <option value={TIPO_FAVORECIDO_CONSTANTS.CONTA_EXTERNA}>Outros Bancos</option>
+                                            <option value={TIPO_FAVORECIDO_CONSTANTS.CONTA_INTERNA}>Banco 1</option>
+                                            <option value={TIPO_FAVORECIDO_CONSTANTS.CONTA_EXTERNA}>Banco 2</option>
                                         </FormControl>
                                     </div>
                                 </div>
