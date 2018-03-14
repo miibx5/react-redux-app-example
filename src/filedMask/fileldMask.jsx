@@ -20,7 +20,7 @@ var buttonStyle = {
 const FieldMask = props => (
     <div>
         <h1>TESTE DO CAMPO AUTO SUGGEST</h1>
-        <AutoSuggestComponent label="teste" list={BANCOS} value={props.valueField} onChange={props.autoSuggestChangeHandle} />
+        <AutoSuggestComponent label="Auto Suggest" list={BANCOS} value={props.valueField} onChange={props.autoSuggestChangeHandle} />
     </div>
 );
 

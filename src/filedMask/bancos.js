@@ -1,5 +1,5 @@
 export const BANCOS = [
-    { value: "654", description: "Banco A.J.Renner S.A." },
+    { value: "654", description: "654 - Banco A.J.Renner S.A." },
     { value: "246", description: "Banco ABC Brasil S.A.www.abcbrasil.com.br " },
     { value: "025", description: "Banco Alfa S.A.www.bancoalfa.com.br " },
     { value: "641", description: "Banco Alvorada S.A." },

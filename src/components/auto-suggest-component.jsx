@@ -29,20 +29,22 @@ class StateAdapter extends ItemAdapter {
 }
 StateAdapter.instance = new StateAdapter()
 
+
+
 const AutosuggestComponent = props => (
     <FormGroup controlId="stateInput">
         <ControlLabel>{props.label}</ControlLabel>
         {/*  {console.log("lista", mountArrayForCombo(props.list))} */}
         <Autosuggest
             datalist={mountArrayForCombo(props.list)}
-            placeholder="What is your favorite state or province?"
+            placeholder={props.placeholder}
             value={props.value}
-
             itemAdapter={StateAdapter.instance}
             datalistOnly={props.description}
+            valueIsItem
             onChange={props.onChange}
-            /*  itemReactKeyPropName={props.value}
-             itemValuePropName="full_name" */
+            itemReactKeyPropName="value"
+            itemValuePropName="description"
             onSelect={props.onSelect} />
     </FormGroup>
 );
